@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{margin: 5%;background-color: #fff;width: 800px;height: 300px;overflow: hidden;}
+        h1{width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;}
+        span{font-size: 100px;font-family: 'Courier New', Courier, monospace;margin-left: 5px;}
+        span:hover{font-size: 200px;color:rgb(23, 58, 213);}
+
+    </style>
+</head>
+<body>
+    <input type="text" id="inputx">
+    <div class="box"><h1 id="text"></h1></div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        var inputData = document.getElementById('inputx');
+        inputData.addEventListener('input',function(){
+            show(inputData.value);
+        })
+        function show(name){
+            $('h1').empty()
+            for(var i=0;i<name.length;i++){
+                $('h1').append("<span>"+name[i]+"</span>")
+            }
+
+        }
+    
+    </script>
+</body>
+</html>
