@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    /* background-color: red; */
+    border: 2px solid black;
+    margin: 10% auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+   box-shadow: 8px 8px 40px -12px rgba(0, 0, 0, 1);
+   cursor: pointer;
+   top: 50%;
+   left: 50%;
+
+}
+
+.future{
+    top: 65%;
+   left: 65%;
+}
+
+.animate{
+    animation: move 1.5s linear ;
+}
+
+@keyframes move {
+    
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: 151622;
+    border-radius: 50%;
+    transform: scale(.4);
+    display: none;
+    position: absolute;
+ 
+}
+
