@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: system-ui;}
+        .box{width: 700px;height: 300px;background-color: #fff;display: flex;justify-content: center;
+            align-items: center;margin: 10% auto;position: relative;}
+        .circle{width: 65px;height: 65px;border-radius: 50%;  margin-right: 20px;background-color: blue;
+                box-shadow: 5px 5px 10px 5px rgba(0, 0, 255, .3);cursor: pointer;display: flex;justify-content: center;align-items: center;}
+        .circle:hover{
+            animation: ins .5s linear forwards;background:blue;border-radius:50px;
+        }
+        .fa-facebook,.fa-twitter,.fa-whatsapp,.fa-linkedin,.fa-instagram{color: white;}
+        .circle:hover i{
+            animation: disolve .6s linear forwards;
+        }
+        h3{display: none;font-family: monospace;}
+        .circle:hover h3{animation: solve .6s linear forwards;color: white;position: absolute;display: block;opacity: 0;}
+        @keyframes disolve {
+            0%{}
+            100%{opacity: 0;}
+        }
+        @keyframes solve {
+            0%{}
+            100%{opacity: 1;}
+        }
+        @keyframes ins {
+            0%{}
+            100%{width: 150px;transform: scaleX(1.1);}
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box">
+        <div class="circle"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i><h3>FaceBook</h3></div>
+        <div class="circle"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i><h3>Twitter</h3></div>
+        <div class="circle"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i><h3>WhatsApp</h3></div>
+        <div class="circle"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i><h3>LinkedIn</h3></div>
+        <div class="circle"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i><h3>Instagram</h3> </div>
+    </div>
+</body>
+</html>
