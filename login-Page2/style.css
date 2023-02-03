@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 1000px;
+    height: 650px;
+    margin: 5% auto;
+    display: grid;
+    grid-template-areas: 'a b';
+    grid-template-columns: 1fr 1fr;
+    flex-basis: 50%;
+    box-shadow: -5px 10px 10px 1px rgba(0, 0, 0, .3);
+    position: relative;
+}
+.page1{
+    grid-area: a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.page2{
+    grid-area: b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes slidebf {
+    0%{}
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slidebb {
+    0%{ transform: translateX(-100%);}
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+}
+.ox{
+    height: 75%;
+}
+.oxcopy{
+    height: 85%;
+}
+.header{
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    gap: 30px;
+}
+.icon{
+    width: 50px;
+    height: 40px;
+    border: 2px solid rgba(0, 0, 0, .3);
+    border-radius:5px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.guide{
+    font-size: 17px;
+    color: grey;
+    text-align: center;
+    padding: 5px;
+}
+.input{
+    width: 90%;
+    height: 50px;
+    color: black;
+    font-size: 20px;
+    background-color: rgba(235, 232, 237, 1);
+    border: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding:15px;
+    outline: 0;
+}
+input::placeholder{
+    color: grey;
+}
+
+.forget{
+    margin-top:20px ;
+    cursor: pointer;
+}
+.btn{
+    width: 200px;
+    padding: 15px;
+    background-color: rgb(250,50,33);
+    text-align: center;
+    color: white;
+    font-size: 19px;
+    border-radius: 30px;
+    margin:20px auto;
+    cursor: pointer;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    width: 500px;
+    height: 650px;
+    left: 50%;
+    background-color: rgb(250,50,33);
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.topic{
+    color: white;
+    font-size: 45px;
+    width: 75%;
+    text-align: center;
+}
+.about{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.x{
+    outline: 2px solid white;
+    background-color: transparent;
+    margin-top: 30px;
+}
