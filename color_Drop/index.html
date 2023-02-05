@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <style>
+        *{box-sizing: border-box;}
+        .box{width: 500px;height: 200px;background-color: #2b2424;margin:10% auto ;display: flex;justify-content: space-between;align-items: center;filter: blur(10px) contrast(20);padding:10px ;}
+        .drop1{width: 70px;height: 70px;background-color: yellow;border-radius: 50%;animation: fmove 1.5s ease-in-out  infinite alternate;}
+        .drop2{width: 70px;height: 70px;background-color: red;border-radius: 50%; animation: bmove 1.5s  ease-in-out infinite alternate;}
+        @keyframes fmove {
+            0%{}
+            100%{transform: translateX(230px);}
+        }
+        @keyframes bmove {
+            0%{}
+            100%{transform: translateX(-230px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="drop1"></div>
+        <div class="drop2"></div>
+    </div>
+</body>
+</html>
