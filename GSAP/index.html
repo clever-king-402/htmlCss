@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GSAP</title>
-    <script src="index.js"></script>
-    <script src="https://cdn.skypack.dev/pin/gsap@v3.11.4-WmKtZWfv0FwK2FWdDWbu/mode=imports/optimized/gsap.js"></script>
-    <style>
-      .box {
-        width: 100px;
-        height: 100px;
-      }
-      .green {
-        background-color: green;
-      }
-      .purple {
-        background-color: purple;
-      }
-      .blue {
-        background-color: blue;
-      }
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        min-height: 100vh;
-        flex-direction: column;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="box green"></div>
-    <div class="box purple"></div>
-    <div class="box blue"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        <ul class="nav-links">
+            <div class="nav-item">
+                <li><a href="#">Our Story</a></li>
+                <div class="active-nav"></div>
+            </div>
+            <div class="nav-item">
+                <li><a href="#">Services</a></li>
+            </div>
+            <div class="nav-item">
+                <li><a href="#">Products</a></li>
+            </div>
+        </ul>
+    </nav>
+   
+    <section>
+        <div class="card">
+            <h1>Awesome sauce</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eligendi tenetur sequi ex numquam veritatis laudantium excepturi sint incidunt expedita.</p>
+        </div>
+        <div class="card">
+            <h1>Preety card</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eligendi tenetur sequi ex numquam veritatis laudantium excepturi sint incidunt expedita.</p>
+        </div>
+        <div class="card">
+            <h1>Animation</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eligendi tenetur sequi ex numquam veritatis laudantium excepturi sint incidunt expedita.</p>
+        </div>
+        <div class="card">
+            <h1>Lazy Stuff</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eligendi tenetur sequi ex numquam veritatis laudantium excepturi sint incidunt expedita.</p>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js" integrity="sha512-RL2ypMFkOs/iB79bWnNiFrZRCqyExtQ38n/K+t7Xjf09YZcvSzqgSaGVj+fiVYEqVRLf/WjdHmwGImZM3XO5gA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./app.js"></script>
+</body>
 </html>
