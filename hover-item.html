@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mbox{width: 1000px;height: 300px;display: flex;justify-content: center;align-items: center;gap: 50px;margin: 10% auto;}
+        .box{width: 200px;height: 200px;text-align: center;background-color: hotpink;transition: all 0.7 ease-in-out;display: flex;justify-content: center;align-items: center;}
+        .mbox:hover > .box:not(:hover){
+            opacity: .6;
+            transform: scale(.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="mbox">
+        <div class="box"><p>Item 1</p></div>
+        <div class="box"><p>Item 2</p></div>
+        <div class="box"><p>Item 3</p></div>
+        <div class="box"><p>Item 4</p></div>
+    </div>
+</body>
+</html>
