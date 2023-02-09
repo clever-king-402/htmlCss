@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .slider-container {
+      width: 50%;
+      height: 15px;
+      border-radius: 5px;
+      background: #ddd;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .slider-thumb {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background: #4caf50;
+      position: absolute;
+      top: -5px;
+      left: 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider-thumb" id="thumb"></div>
+</div>
+
+<p>Value: <span id="value"></span></p>
+
+<script>
+  var thumb = document.getElementById("thumb");
+  var sliderContainer = document.querySelector(".slider-container");
+  var valueDisplay = document.getElementById("value");
+
+  var sliderWidth = sliderContainer.offsetWidth;
+  var thumbWidth = thumb.offsetWidth;
+  var minValue = 0;
+  var maxValue = 100;
+  var range = maxValue - minValue;
+
+  thumb.style.left = (sliderWidth - thumbWidth) * 0.5 + "px";
+  valueDisplay.innerHTML = ((sliderWidth - thumbWidth) * 0.5 / (sliderWidth - thumbWidth)) * range + minValue;
+
+  sliderContainer.addEventListener("click", function(event) {
+    var clickPosition = event.clientX - sliderContainer.getBoundingClientRect().left;
+    var newLeft = clickPosition - thumbWidth * 0.5;
+
+    if (newLeft < 0) {
+      newLeft = 0;
+    } else if (newLeft > sliderWidth - thumbWidth) {
+      newLeft = sliderWidth - thumbWidth;
+    }
+
+    thumb.style.left = newLeft + "px";
+    valueDisplay.innerHTML = (newLeft / (sliderWidth - thumbWidth)) * range + minValue;
+  });
+
+  thumb.addEventListener("mousedown", function() {
+    document.addEventListener("mousemove", moveThumb);
+    document.addEventListener("mouseup", removeMoveThumbEvent);
+  });
+
+  function moveThumb(event) {
+    var newLeft = event.clientX - sliderContainer.getBoundingClientRect().left - thumbWidth * 0.5;
+
+    if (newLeft < 0) {
+      newLeft = 0;
+    } else if (newLeft > sliderWidth - thumbWidth) {
+      newLeft = sliderWidth - thumbWidth;
+    }
+    thumb.style.left = newLeft + "px";
+    valueDisplay.innerHTML = (newLeft / (sliderWidth - thumbWidth)) * range + minValue;
+  }
+  function removeMoveThumbEvent() {
+    document.removeEventListener("mousemove", moveThumb);
+  }
+</script>
