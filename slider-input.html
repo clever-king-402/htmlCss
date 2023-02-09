@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <style>
+        .container{width: 400px;height: 100px;margin: 10% auto;}
+        input{width: 300px;height: 10px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span id="value">Value : 0</span><br>
+        <input type="range" min="0" max="200" id="range" onchange="change(this.value)" onmousemove="change(this.value)"><br>
+    </div>
+    <script>
+        function change(value){
+            document.getElementById('value').innerText = "Value : "+value;
+        }
+    </script>
+</body>
+</html>
