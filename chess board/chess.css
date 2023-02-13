@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+table{
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 50px auto;
+}
+td{
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+}
+
+.cream{
+    background-color: wheat;
+}
+.brown{
+    background-color: brown;
+}
