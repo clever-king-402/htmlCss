@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riple</title>
+    <style>
+       .box{width: 160px;height: 160px;border-radius: 50%;background-color: hotpink;margin: 50px;top: 0;left: 0;position: relative;}
+       .box::after{ 
+       width: 100%;height: 100%;border-radius: 50%;border-radius: 50%;top: 0;left: 0;border: 2px solid blue;content: "";position: absolute;
+       
+       }
+       .box:hover::after{
+        animation: rip .5s linear 0s  alternate;
+       }
+       @keyframes rip {
+        0%{transform: scale(1,1);background-color: aquamarine;border: 5px solid aquamarine;}
+        25%{transform: scale(1.1,1.1);background-color: blue;border: 5px solid blue;opacity: .2;}
+        75%{transform: scale(1.2,1.2);background-color: brown;border: 5px solid brown;opacity: .2;}
+        100%{transform: scale(1.3,1.3);background-color: navajowhite;border: 5px solid navajowhite;opacity: .2;}
+       }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
