@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+
+.ludo{
+    width: 900px;
+    height: 900px;
+    border: 2px solid black;
+    margin:auto;
+    margin-top: 30px;
+}
+
+.p1{
+    display: inline-flex;
+}
+
+.box{
+    width: 360px;
+    height: 360px;
+    border: 1px solid black;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+
+.subbox{
+    width: 270px;
+    height: 270px;
+    margin: auto;
+    margin-top: 43px;
+    background-color: white;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dice{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    margin: 20px;
+}
+.redb{
+    border:10px solid red;
+}
+.greenb{
+    border:10px solid green;
+}
+.blueb{
+    border:10px solid blue;
+}
+.yellowb{
+    border:10px solid yellow;
+}
+
+.first{
+    border: 1px solid black;
+    width: 180px;
+    height: 360px;
+}
+td{
+    border: 1px solid black;
+    width: 59px;
+    height: 59px;
+}
+.second{
+    /* transform:translateX(90px) translateY(-90px) rotate(90deg); */
+    width: 360px;
+    height: 180px;
+}
+
+ img{
+    width: 100%;
+    margin-left: 17px;
+ }
+.center{
+    /* width:180px;
+    height:180px ; */
+   
+   border-top: 90px solid green;
+   border-right: 90px solid yellow;
+   border-bottom: 90px solid blue;
+   border-left: 90px solid red;
+   width: 0;
+    /* border: 5px solid black; */
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+.yellowb:hover{
+    background-color: brown;
+}
+
